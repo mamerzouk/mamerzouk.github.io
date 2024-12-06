@@ -3,70 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mohamed Amine Merzouk</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            text-align: center;
-            max-width: 400px;
-        }
-        img {
-            border-radius: 50%;
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 2rem;
-            margin: 0;
-            color: #fff;
-        }
-        h2 {
-            font-size: 2rem;
-            color: #fff;
-            margin-top: 5px;
-            font-weight: normal;
-        }
-        h3 {
-            font-size: 1.3rem;
-            color: #bbb;
-            margin-top: 5px;
-            font-weight: normal;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            text-decoration: none;
-            background-color: #1a73e8;
-            color: #fff;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        a:hover {
-            background-color: #1668c1;
-        }
-    </style>
+    <title>Mohamed Amine Merzouks</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <img src="photo.jpg" alt=".">
-        <h1>Mohamed Amine Merzouk</h1>
-        <h2>ⵎⵓⵃⴰⵎⴻⴷ  ⴰⵎⵉⵏ  ⵎⴻⵔⵥⵓⵇ</h2>
-        <h3>Postdoctoral Researcher</h3>
-        <a href="https://scholar.google.com/citations?user=jawktIgAAAAJ" target="_blank">Google Scholar</a>
-    </div>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#papers">Papers</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <img src="photo.jpg">
+        <div class="info">
+            <h1>ⵎⵓⵃⴰⵎⴻⴷ ⴰⵎⵉⵏ ⵎⴻⵔⵥⵓⵇ</h1>
+            <h2>Mohamed Amine Merzouk</h2>
+            <p>I'm a postdoctoral researcher at <a target=”_blank” href="https://mila.quebec/">Mila</a> working on AI safety with Pr. <a target=”_blank” href="https://khomh.net/">Foutse Khomh</a>. My research focuses on understanding the vulnerabilities of AI models in order to design more robust and secure systems.</p>
+            <ul>
+                <li><a target=”_blank” href="https://scholar.google.com/citations?user=jawktIgAAAAJ">Google Scholar</a></li>
+                <li><a target=”_blank” href="https://github.com/mamerzouk/">Github</a></li>
+                <li><a target=”_blank” href="https://linkedin.com/in/mamerzouk/">LinkedIn</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Sections -->
+    <section id="research">
+        <h2>Research</h2>
+        <hr>
+        <p>My research interests lie in the intersection of artificial intelligence, machine learning, and safety, with a particular focus on large language models (LLMs). I am deeply interested in exploring the adversarial robustness of LLMs, specifically examining vulnerabilities such as jailbreaks, prompt injections, data poisoning, and backdoors. I am currently focused on developing techniques for improving the security, reliability, and ethical use of AI. This involves research into methods for detecting, mitigating, and preventing malicious interactions with LLMs, as well as advancing transparency and controllability in AI.</p>
+    </section>
+
+    <section id="papers">
+        <h2>Papers</h2>
+        <hr>
+        <!-- Paper Template -->
+        <div class="paper">
+            <div class="paper-title">Diffusion-based Adversarial Purification for Intrusion Detection</div>
+            <div class="paper-authors"><u>Mohamed Amine Merzouk</u>, Erwan Beurier, Reda Yaich, Nora Boulahia-Cuppens, Frédéric Cuppens</div>
+            <div class="paper-publication">arXiv:2406.17606 [cs.CR] (2024)</div>
+            <ul>
+                <li><a target=”_blank” href="https://arxiv.org/abs/2406.17606">[Paper]</a></li>
+                <li><a target=”_blank” href="https://github.com/mamerzouk/adversarial-purification">[Code]</a></li>
+            </ul>
+        </div>
+        <div class="paper">
+            <div class="paper-title">Adversarial robustness of deep reinforcement learning-based intrusion detection</div>
+            <div class="paper-authors"><u>Mohamed Amine Merzouk</u>, Christopher Neal, Joséphine Delas, Reda Yaich, Nora Boulahia-Cuppens, Frédéric Cuppens</div>
+            <div class="paper-publication">International Journal of Information Security (2024)</div>
+            <ul>
+                <li><a target=”_blank” href="https://link.springer.com/article/10.1007/s10207-024-00903-2">[Paper]</a></li>
+                <li><a target=”_blank” href="https://github.com/mamerzouk/robust_drl_ids">[Code]</a></li>
+            </ul>
+        </div>
+        <div class="paper">
+            <div class="paper-title">Parameterizing poisoning attacks in federated learning-based intrusion detection</div>
+            <div class="paper-authors"><u>Mohamed Amine Merzouk</u>, Frédéric Cuppens, Nora Boulahia-Cuppens, Reda Yaich</div>
+            <div class="paper-publication">Proceedings of the 18th International Conference on Availability, Reliability and Security (2023)</div>
+            <ul>
+                <li><a target=”_blank” href="https://dl.acm.org/doi/abs/10.1145/3600160.3605090">[Paper]</a></li>
+                <li><a target=”_blank” href="https://github.com/mamerzouk/poisoning-fl-ids">[Code]</a></li>
+            </ul>
+        </div>
+        <div class="paper">
+            <div class="paper-title">Investigating the practicality of adversarial evasion attacks on network intrusion detection</div>
+            <div class="paper-authors"><u>Mohamed Amine Merzouk</u>, Frédéric Cuppens, Nora Boulahia-Cuppens, Reda Yaich</div>
+            <div class="paper-publication">Annals of Telecommunications (2022)</div>
+            <ul>
+                <li><a target=”_blank” href="https://link.springer.com/article/10.1007/s12243-022-00910-1">[Paper]</a></li>
+                <li><a target=”_blank” href="https://github.com/mamerzouk/adversarial_analysis">[Code]</a></li>
+            </ul>
+        </div>
+        <div class="paper">
+            <div class="paper-title">Evading deep reinforcement learning-based network intrusion detection with adversarial attacks</div>
+            <div class="paper-authors"><u>Mohamed Amine Merzouk</u>, Joséphine Delas, Christopher Neal, Frédéric Cuppens, Nora Boulahia-Cuppens, Reda Yaich</div>
+            <div class="paper-publication">Proceedings of the 17th International Conference on Availability, Reliability and Security (2022)</div>
+            <ul>
+                <li><a target=”_blank” href="https://dl.acm.org/doi/abs/10.1145/3538969.3539006">[Paper]</a></li>
+                <li><a target=”_blank” href="https://github.com/mamerzouk/robust_drl_ids">[Code]</a></li>
+            </ul>
+        </div>
+        <div class="paper">
+            <div class="paper-title">A deeper analysis of adversarial examples in intrusion detection</div>
+            <div class="paper-authors"><u>Mohamed Amine Merzouk</u>, Frédéric Cuppens, Nora Boulahia-Cuppens, Reda Yaich</div>
+            <div class="paper-publication">Proceedings of the 15th International Conference on Risks and Security of Internet and Systems (2021)</div>
+            <ul>
+                <li><a target=”_blank” href="https://link.springer.com/article/10.1007/s12243-022-00910-1">[Paper]</a></li>
+                <li><a target=”_blank” href="https://github.com/mamerzouk/adversarial_analysis">[Code]</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="teaching">
+        <h2>Teaching</h2>
+        <hr>
+        <!-- Course Template -->
+        <div class="course">
+            <div class="course-title">CR345: Security of servers</div>
+            <div class="course-description">Lecturer: Winter 2025</div>
+            <ul>
+                <li><a target=”_blank” href="https://www.polymtl.ca/programmes/cours/securite-des-serveurs">[Course website]</a></li>
+            </ul>
+        </div>
+        <div class="course">
+            <div class="course-title">INF4420A: Computer security</div>
+            <div class="course-description">Lecturer: Summer 2023, Summer 2024</div>
+            <div class="course-description">Lab instructor: Winter 2022, Fall 2022, Summer 2023, Summer 2024</div>
+            <ul>
+                <li><a target=”_blank” href="https://www.polymtl.ca/programmes/cours/securite-informatique">[Course website]</a></li>
+            </ul>
+        </div>
+        <div class="course">
+            <div class="course-title">INF6103: Cybersecurity of critical infrastructures</div>
+            <div class="course-description">Lab instructor: Winter 2022, Fall 2022, Fall 2023, Fall 2024</div>
+            <ul>
+                <li><a target=”_blank” href="https://www.polymtl.ca/programmes/cours/cybersecurite-des-infrastructures-critiques-0">[Course website]</a></li>
+            </ul>
+        </div>
+        <div class="course">
+            <div class="course-title">INF8602: Cybersecurity of operating systems</div>
+            <div class="course-description">Lab instructor: Winter 2022</div>
+            <ul>
+                <li><a target=”_blank” href="https://www.polymtl.ca/programmes/cours/securite-des-systemes-dexploitation">[Course website]</a></li>
+            </ul>
+        </div>
+        <div class="course">
+            <div class="course-title">INF1040: Introduction to Computer Engineering</div>
+            <div class="course-description">Evaluator: Winter 2021, Fall 2021</div>
+            <ul>
+                <li><a target=”_blank” href="https://www.polymtl.ca/programmes/cours/introduction-lingenierie-informatique">[Course website]</a></li>
+            </ul>
+        </div>
+        
+
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <hr>
+        <p>Email: <tt style="color: gray">fname1 [dash] fname2 [dot] lname [at] mila [dot] quebec</tt></p>
+    </section>
 </body>
 </html>
+

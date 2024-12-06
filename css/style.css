@@ -1,0 +1,106 @@
+/* Basic Reset */
+:root {
+  --theme-color: #005073;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Roboto, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    color: #222222;
+}
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+header img {
+    border-radius: 25%;
+    width: 190px;
+    height: 190px;
+    margin-right: 20px;
+}
+header .info {
+    flex: 1;
+}
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--theme-color);
+}
+header h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: var(--theme-color);
+}
+header p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+ul li {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: var(--theme-color);
+}
+/* Sections */
+section {
+    margin-bottom: 40px;
+}
+section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--theme-color);
+    font-weight: 500;
+}
+section p {
+    font-size: 1rem;
+}
+hr {
+    margin-bottom: 15px;
+    color: var(--theme-color);
+}
+.paper,
+.course {
+    margin-bottom: 15px;
+}
+.paper-title,
+.course-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.paper-authors,
+.course-description {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #444444;
+}
+.paper-publication {
+    font-size: 0.9rem;
+    color: #444444;
+}
+.course, .paper ul li {
+    font-size: 0.9rem;
+}
