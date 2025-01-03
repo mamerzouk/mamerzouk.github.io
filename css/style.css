@@ -13,9 +13,11 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    text-align: justify;
     text-justify: inter-word;
     color: #222222;
+}
+p {
+    text-align: justify;
 }
 /* Navbar */
 nav {
@@ -61,6 +63,9 @@ ul {
 ul li {
     margin: 0;
 }
+header ul li {
+    font-size: 1rem;
+}
 a {
     text-decoration: none;
     color: var(--theme-color);
@@ -82,14 +87,17 @@ hr {
     margin-bottom: 15px;
     color: var(--theme-color);
 }
+links {
+    font-size: 0.9rem;
+}
 .paper,
 .course {
     margin-bottom: 15px;
 }
 .paper-title,
 .course-title {
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 550;
 }
 .paper-authors,
 .course-description {
@@ -103,4 +111,15 @@ hr {
 }
 .course, .paper ul li {
     font-size: 0.9rem;
+}
+
+.responsive-image {
+  display: none;
+}
+
+/* Show the image only on wider screens */
+@media (min-width: 550px) {
+  .responsive-image {
+    display: block;
+  }
 }
