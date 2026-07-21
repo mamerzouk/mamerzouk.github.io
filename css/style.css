@@ -1,11 +1,23 @@
 /* Basic Reset */
 :root {
   --theme-color: #005073;
+  --bg: #ffffff;
+  --text: #222222;
+  --text-muted: #444444;
+}
+:root[data-theme="dark"] {
+  --theme-color: #56b8d9;
+  --bg: #15181c;
+  --text: #e6e6e6;
+  --text-muted: #a8a8a8;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html {
+    background-color: var(--bg);
 }
 body {
     font-family: Roboto, sans-serif;
@@ -14,7 +26,9 @@ body {
     margin: 0 auto;
     padding: 20px;
     text-justify: inter-word;
-    color: #222222;
+    color: var(--text);
+    background-color: var(--bg);
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 p {
     text-align: justify;
@@ -22,8 +36,46 @@ p {
 /* Navbar */
 nav {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
     margin-bottom: 20px;
+}
+/* Sliding light/dark switch */
+.theme-toggle {
+    position: relative;
+    flex: none;
+    margin-left: 20px;
+    padding: 0;
+    width: 46px;
+    height: 24px;
+    background: none;
+    border: 1px solid var(--theme-color);
+    border-radius: 12px;
+    cursor: pointer;
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+}
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    opacity: 1;
+}
+.theme-toggle .knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--theme-color);
+    transition: transform 0.25s ease;
+}
+:root[data-theme="dark"] .theme-toggle .knob {
+    transform: translateX(22px);
+}
+@media (prefers-reduced-motion: reduce) {
+    .theme-toggle .knob {
+        transition: none;
+    }
 }
 /* Header */
 header {
@@ -128,11 +180,11 @@ links {
 .course-description {
     font-size: 0.9rem;
     font-style: italic;
-    color: #444444;
+    color: var(--text-muted);
 }
 .paper-publication {
     font-size: 0.9rem;
-    color: #444444;
+    color: var(--text-muted);
 }
 .course, .paper ul li {
     font-size: 0.9rem;
