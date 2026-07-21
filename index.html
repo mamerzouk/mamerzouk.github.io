@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Amine Merzouks</title>
+    <title>Mohamed Amine Merzouk</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,11 +19,13 @@
 
     <!-- Header -->
     <header>
-        <img src="photo.jpg" class="responsive-image">
+        <div class="avatar responsive-image">
+            <img src="photo.png" alt="Mohamed Amine Merzouk">
+        </div>
         <div class="info">
             <h1>ⵎⵓⵃⴰⵎⴻⴷ ⴰⵎⵉⵏ ⵎⴻⵔⵥⵓⵇ</h1>
             <h2>Mohamed Amine Merzouk</h2>
-            <p>I'm a postdoctoral researcher at <a target=”_blank” href="https://mila.quebec/">Mila</a> and McGill University working on AI safety with Pr. <a target=”_blank” href="https://mila.quebec/en/directory/adam-m-oberman/">Adam Oberman</a>. My research focuses on understanding the vulnerabilities of AI models in order to design more robust and secure systems.</p>
+            <p>I'm an AI safety researcher, currently a postdoc at <a target=”_blank” href="https://mila.quebec/">Mila</a> and <a target=”_blank” href="https://www.mcgill.ca/">McGill University</a> with Pr. <a target=”_blank” href="https://www.adamoberman.net/">Adam Oberman</a>. I am interested in making language models robustly aligned, and in understanding what they represent internally about themselves.</p>
             <ul>
                 <li><a target=”_blank” href="https://scholar.google.com/citations?user=jawktIgAAAAJ">Google Scholar</a></li>
                 <li><a target=”_blank” href="https://github.com/mamerzouk/">Github</a></li>
@@ -36,7 +38,7 @@
     <section id="research">
         <h2>Research</h2>
         <hr>
-        <p>My research interests lie in the intersection of artificial intelligence, machine learning, and safety, with a particular focus on large language models (LLMs). I am particularly interested in exploring the adversarial robustness of LLMs, specifically examining vulnerabilities such as jailbreaks, prompt injections, data poisoning, and backdoors. I am currently focused on developing techniques for improving the security, reliability, and ethical use of AI. This involves research into methods for detecting, mitigating, and preventing malicious interactions with LLMs, as well as advancing transparency and controllability in AI.</p>
+        <p>We specify what we want from a language model through examples, while the properties themselves must hold far beyond them. I am interested in <b>AI alignment</b> that operates on a model's internal representations, shaping abstract dispositions rather than enumerating desired outputs, so that behavior follows from what a model is rather than from what it has been told to do. This motivates a parallel interest in <b>AI introspection</b>: what models encode about their own state, their plans, and the process of producing their own outputs, and whether those internal signals can be read out faithfully enough to support oversight. The same question underlies honesty and deception, where what matters is whether a model's stated reasoning reflects the computation that actually produced it, and whether its representations can expose a divergence that the output alone would hide. I come from a cybersecurity background: my PhD thesis was on adversarial attacks and defenses for AI-based network intrusion detection systems.</p>
     </section>
 
     <section id="papers">
@@ -44,9 +46,53 @@
         <hr>
         <!-- Paper Template -->
         <div class="paper">
+            <div class="paper-title">Efficient Safety Alignment of Language Models via Latent Personality Traits</div>
+            <div class="paper-authors"><u>Mohamed Amine Merzouk</u>, Nolan Smyth, Damiano Fornasiere, Linh Le, David Williams-King, Adam Oberman</div>
+            <div class="paper-publication">Conference on Language Modeling (COLM 2026)</div>
+            <ul>
+                <li><a target=”_blank” href="https://arxiv.org/abs/2607.07918">[Paper]</a></li>
+                <li><a target=”_blank” href="https://github.com/mamerzouk/latent-personality-alignment">[Code]</a></li>
+            </ul>
+        </div>
+        <div class="paper">
+            <div class="paper-title">How Much is Left? LLMs Linearly Encode Their Remaining Output Length</div>
+            <div class="paper-authors"><u>Mohamed Amine Merzouk</u>, Dmitri Carpov, Mirko Bronzi, Damiano Fornasiere, Adam Oberman</div>
+            <div class="paper-publication">Preprint (2026)</div>
+            <ul>
+                <li><a target=”_blank” href="https://arxiv.org/abs/2607.05316">[Paper]</a></li>
+                <li><a target=”_blank” href="https://anonymous.4open.science/r/llm-output-length">[Code]</a></li>
+            </ul>
+        </div>
+        <div class="paper">
+            <div class="paper-title">Latent Personality Alignment: Improving Harmlessness Without Mentioning Harms</div>
+            <div class="paper-authors">Linh Le, David Williams-King, <u>Mohamed Amine Merzouk</u>, Aton Kamanda, Adam Oberman</div>
+            <div class="paper-publication">Trustworthy AI Workshop at the International Conference on Learning Representations (ICLR 2026)</div>
+            <ul>
+                <li><a target=”_blank” href="https://arxiv.org/abs/2605.08496">[Paper]</a></li>
+                <li><a target=”_blank” href="https://github.com/mamerzouk/latent-personality-alignment">[Code]</a></li>
+            </ul>
+        </div>
+        <div class="paper">
+            <div class="paper-title">Deep-Cover Agents: Long-Horizon Prompt Injections on Production LLM Systems</div>
+            <div class="paper-authors">Neel Alex, <u>Mohamed Amine Merzouk</u>, David Krueger</div>
+            <div class="paper-publication">Preprint (2026)</div>
+            <ul>
+                <li><a target=”_blank” href="https://openreview.net/forum?id=U3kxnDzuRz">[Paper]</a></li>
+            </ul>
+        </div>
+        <div class="paper">
+            <div class="paper-title">Efficiency vs. Alignment: Investigating Safety and Fairness Risks in Parameter-Efficient Fine-Tuning of LLMs</div>
+            <div class="paper-authors">Mina Taraghi, Yann Pequignot, Amin Nikanjam, <u>Mohamed Amine Merzouk</u>, Foutse Khomh</div>
+            <div class="paper-publication">Preprint (2025)</div>
+            <ul>
+                <li><a target=”_blank” href="https://arxiv.org/abs/2511.00382">[Paper]</a></li>
+                <li><a target=”_blank” href="https://github.com/mina-taraghi/PEFT_Safety_Fairness">[Code]</a></li>
+            </ul>
+        </div>
+        <div class="paper">
             <div class="paper-title">Diffusion-based Adversarial Purification for Intrusion Detection</div>
             <div class="paper-authors"><u>Mohamed Amine Merzouk</u>, Erwan Beurier, Reda Yaich, Nora Boulahia-Cuppens, Frédéric Cuppens, Foutse Khomh</div>
-            <div class="paper-publication">Proceedings of the 39th Conference on Data and Applications Security and Privacy (DBSec 2025)</div>
+            <div class="paper-publication">Conference on Data and Applications Security and Privacy (DBSec 2025)</div>
             <ul>
                 <li><a target=”_blank” href="https://link.springer.com/chapter/10.1007/978-3-031-96590-6_19">[Paper]</a></li>
                 <li><a target=”_blank” href="https://github.com/mamerzouk/adversarial-purification">[Code]</a></li>
@@ -64,7 +110,7 @@
         <div class="paper">
             <div class="paper-title">Parameterizing poisoning attacks in federated learning-based intrusion detection</div>
             <div class="paper-authors"><u>Mohamed Amine Merzouk</u>, Frédéric Cuppens, Nora Boulahia-Cuppens, Reda Yaich</div>
-            <div class="paper-publication">Proceedings of the 18th International Conference on Availability, Reliability and Security (2023)</div>
+            <div class="paper-publication">International Conference on Availability, Reliability and Security (ARES 2023)</div>
             <ul>
                 <li><a target=”_blank” href="https://dl.acm.org/doi/abs/10.1145/3600160.3605090">[Paper]</a></li>
                 <li><a target=”_blank” href="https://github.com/mamerzouk/poisoning-fl-ids">[Code]</a></li>
@@ -82,7 +128,7 @@
         <div class="paper">
             <div class="paper-title">Evading deep reinforcement learning-based network intrusion detection with adversarial attacks</div>
             <div class="paper-authors"><u>Mohamed Amine Merzouk</u>, Joséphine Delas, Christopher Neal, Frédéric Cuppens, Nora Boulahia-Cuppens, Reda Yaich</div>
-            <div class="paper-publication">Proceedings of the 17th International Conference on Availability, Reliability and Security (2022)</div>
+            <div class="paper-publication">International Conference on Availability, Reliability and Security (ARES 2022)</div>
             <ul>
                 <li><a target=”_blank” href="https://dl.acm.org/doi/abs/10.1145/3538969.3539006">[Paper]</a></li>
                 <li><a target=”_blank” href="https://github.com/mamerzouk/robust_drl_ids">[Code]</a></li>
@@ -91,9 +137,9 @@
         <div class="paper">
             <div class="paper-title">A deeper analysis of adversarial examples in intrusion detection</div>
             <div class="paper-authors"><u>Mohamed Amine Merzouk</u>, Frédéric Cuppens, Nora Boulahia-Cuppens, Reda Yaich</div>
-            <div class="paper-publication">Proceedings of the 15th International Conference on Risks and Security of Internet and Systems (2021)</div>
+            <div class="paper-publication">International Conference on Risks and Security of Internet and Systems (CRiSIS 2020)</div>
             <ul>
-                <li><a target=”_blank” href="https://link.springer.com/article/10.1007/s12243-022-00910-1">[Paper]</a></li>
+                <li><a target=”_blank” href="https://link.springer.com/chapter/10.1007/978-3-030-68887-5_4">[Paper]</a></li>
                 <li><a target=”_blank” href="https://github.com/mamerzouk/adversarial_analysis">[Code]</a></li>
             </ul>
         </div>
