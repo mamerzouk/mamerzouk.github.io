@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Safety Reading Group</title>
+    <title>Mila AI Safety Reading Group</title>
     <meta name="description" content="The AI Safety Reading Group at Mila: talks and discussions on AI safety and alignment, open to everyone.">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="rg.css">
@@ -42,7 +42,7 @@
     <!-- Header -->
     <header>
         <div class="info">
-            <h1>AI Safety Reading Group</h1>
+            <h1>Mila AI Safety Reading Group</h1>
             <p>The reading group meets to present and discuss recent research on AI safety and alignment. Past sessions have covered interpretability and representation learning, evaluations and benchmarks for language models and agents, adversarial attacks and jailbreaks, honesty and oversight, safe reinforcement learning, privacy, and the societal impact of AI systems. Presenters are Mila members and invited speakers from other institutions, and every session ends with an open discussion.</p>
             <dl class="facts">
                 <dt>When</dt>
@@ -69,11 +69,11 @@
         <ul class="organizer-list">
             <li class="organizer">
                 <div><a class="organizer-name" target="_blank" rel="noopener" href="https://jaggbow.github.io/">Oussama Boussif</a> <span class="organizer-affiliation">· Université de Montréal &amp; Mila</span></div>
-                <div class="organizer-contact"><tt class="email">oussama.boussif [at] mila [dot] quebec</tt></div>
+                <div class="organizer-contact"><tt class="email">fname [dot] lname [at] mila [dot] quebec</tt></div>
             </li>
             <li class="organizer">
                 <div><a class="organizer-name" target="_blank" rel="noopener" href="https://www.linkedin.com/in/olivier-coutu-b47a198b/">Olivier Coutu</a> <span class="organizer-affiliation">· FAR.AI</span></div>
-                <div class="organizer-contact"><tt class="email">coutu.olivier [at] gmail [dot] com</tt></div>
+                <div class="organizer-contact"><tt class="email">fname [dot] lname [at] gmail [dot] com</tt></div>
             </li>
             <li class="organizer">
                 <div><a class="organizer-name" target="_blank" rel="noopener" href="https://orpheuslummis.info/">Orpheus Lummis</a> <span class="organizer-affiliation">· Horizon Omega</span></div>
@@ -81,11 +81,11 @@
             </li>
             <li class="organizer">
                 <div><a class="organizer-name" target="_blank" rel="noopener" href="https://mamerzouk.github.io/">Mohamed Amine Merzouk</a> <span class="organizer-affiliation">· McGill University &amp; Mila</span></div>
-                <div class="organizer-contact"><tt class="email">mohamed-amine.merzouk [at] mila [dot] quebec</tt></div>
+                <div class="organizer-contact"><tt class="email">fname1 [dash] fname2 [dot] lname [at] mila [dot] quebec</tt></div>
             </li>
             <li class="organizer">
                 <div><a class="organizer-name" target="_blank" rel="noopener" href="https://nolan-smyth.com/index">Nolan Smyth</a> <span class="organizer-affiliation">· Université de Montréal &amp; Mila</span></div>
-                <div class="organizer-contact"><tt class="email">nolanwsmyth [at] gmail [dot] com</tt></div>
+                <div class="organizer-contact"><tt class="email">fname [dot] lname [at] mila [dot] quebec</tt></div>
             </li>
         </ul>
     </section>
@@ -107,6 +107,9 @@
                 <p>We provide evidence that language models can detect, localize and, to a certain degree, verbalize the difference between perturbations applied to their activations. More precisely, we either (a) mask activations, simulating dropout, or (b) add Gaussian noise to them, at a target sentence. We then ask a multiple-choice question such as &quot;Which of the previous sentences was perturbed?&quot;, &quot;At which layer did the perturbation occur?&quot;, or &quot;Which of the two perturbations was applied?&quot;. We test models from the Gemma, Llama, Olmo, and Qwen families, with sizes between 8B and 32B, all of which can easily detect and localize the perturbations. Notably, Gemma4-31B and Qwen3-32B&#x27;s accuracy in classifying which perturbation was applied improves as a function of the perturbation strength. All models can also learn, when taught in context, to distinguish between dropout and Gaussian noise, and to identify the magnitude and layer of the perturbation, often generalizing to unseen examples. We present several controls and early results on the mechanistic causes behind these findings. Because dropout has been used as a training-regularization technique, while Gaussian noise is sometimes added during inference, we conclude by discussing the possibility of a data-agnostic &quot;training awareness&quot; signal and the implications for AI safety.</p>
                 <div class="talk-subheading">About the speaker</div>
                 <p>Damiano is a senior research scientist at LawZero, where he works on the Scientist AI and on language models’ ‘situational awareness’. He obtained a Ph.D. in mathematics and computer science at the University of Barcelona.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2604.17465">[Paper]</a></li>
+                </ul>
             </details>
         </article>
         <article class="talk" id="talk-2026-06-10-vitoria-barin-pacela">
@@ -119,6 +122,9 @@
                 <p>The linear representation hypothesis states that neural network activations encode high-level concepts as linear mixtures. However, under superposition, this encoding is a projection from a higher-dimensional concept space into a lower-dimensional activation space, and a linear decision boundary in the concept space need not remain linear after projection. In this setting, classical sparse coding methods with per-sample iterative inference leverage compressed sensing guarantees to recover latent factors. Sparse autoencoders (SAEs), on the other hand, amortise sparse inference into a fixed encoder, introducing a systematic gap. We show this amortisation gap persists across training set sizes, latent dimensions, and sparsity levels, causing SAEs to fail under out-of-distribution (OOD) compositional shifts. Through controlled experiments that decompose the failure, we identify dictionary learning -- not the inference procedure -- as the binding constraint: SAE-learned dictionaries point in substantially wrong directions, and replacing the encoder with per-sample FISTA on the same dictionary does not close the gap. An oracle baseline proves the problem is solvable with a good dictionary at all scales tested. Our results reframe the SAE failure as a dictionary learning challenge, not an amortisation problem, and point to scalable dictionary learning as the key open problem for sparse inference under superposition.</p>
                 <div class="talk-subheading">About the speaker</div>
                 <p>Vitória Barin Pacela is a PhD candidate in Computer Science at Mila – Quebec AI Institute and the Université de Montréal, specializing in causal representation learning, independent component analysis, disentanglement, and out-of-distribution generalization under the supervision of Professor Simon Lacoste-Julien. Previously, she earned her bachelor’s degree in computer science and master’s degree in data science from the University of Helsinki.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2603.28744">[Paper]</a></li>
+                </ul>
             </details>
         </article>
         <article class="talk" id="talk-2026-05-27-verna-dankers">
@@ -131,6 +137,10 @@
                 <p>In this talk, I present a knowledge injection paradigm and present two use cases. Firstly, I introduce our new unlearning testbed, LACUNA, which injects PII into known parameters and can evaluate whether unlearning methods actually target the parameters storing the memories they aim to unlearn. Secondly, I present Tiered Language Models, which safeguard capabilities injected into specific parameters. These can only be unlocked with the right key, enabling controlled access in open-weight models.</p>
                 <div class="talk-subheading">About the speaker</div>
                 <p>Verna Dankers is a postdoctoral researcher at McGill University and Mila (Quebec AI institute), working with Prof Siva Reddy. She obtained her PhD from the University of Edinburgh, UK, as part of the UKRI Centre for Doctoral Training in Natural Language Processing, under the supervision of Prof Ivan Titov. She conducted internships at Meta&#x27;s FAIR and at Microsoft Research. Her research focuses on understanding how large language models work through the lenses of (non-)compositionality, memorization and generalization. She received the 2025 Outstanding Paper Award at IJCAI and the Best Paper Award at CoNLL 2021 for her work on generalization in language models.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2607.02513">[Paper: LACUNA]</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.21638">[Paper: Tiered LMs]</a></li>
+                </ul>
             </details>
         </article>
         <article class="talk" id="talk-2026-04-29-julien-armand">
@@ -143,6 +153,9 @@
                 <p>As autonomous agents are increasingly deployed to interactively learn from their environment, they may not be designed to reason about the presence of other learning agents. To achieve optimal outcomes, these agents have to coordinate implicitly. I will present my research on how the exploration-exploitation strategies impact this coordination in two-player matrix games. I selected known multi-agent coordination challenges and studied these learning strategies across different noise levels.</p>
                 <div class="talk-subheading">About the speaker</div>
                 <p>Je suis étudiant à la maîtrise recherche à l&#x27;Université Laval et à Mila, sous la supervision d&#x27;Audrey Durand. J&#x27;ai complété un baccalauréat en mathématiques à l&#x27;Université de Montréal, avec une spécialisation en statistique. Ma recherche porte sur l&#x27;apprentissage par renforcement dans les environnements multi-agents. Je m&#x27;intéresse particulièrement à la façon dont la nature de l&#x27;exploration façonne le comportement des agents dans des jeux matriciels.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://openreview.net/forum?id=iR7bQhSgFW">[Paper]</a></li>
+                </ul>
             </details>
         </article>
         <article class="talk" id="talk-2026-04-15-tommaso-tosato">
@@ -155,6 +168,9 @@
                 <p>In this talk, I will announce the founding of Tara Research, a new nonprofit organization dedicated to benchmarking honesty in language models and evaluating the effectiveness of both white-box and black-box approaches to enforcing safety. I will then present two lines of work under this umbrella. First, our work on activation steering as a lightweight runtime defense against misalignment. We introduce two projection-aware methods, Steer-to-Target-Projection and Steer-to-Mirror-Projection, that selectively intervene only on tokens whose activations fall below distributional thresholds derived from a logistic regression decision boundary. We show that our methods substantially recover and maintain &quot;honesty&quot; while preserving textual coherence and model capabilities. Second, I will present preliminary results on a benchmarking effort to measure dishonest behavior in LLM agents: specifically, whether agents lie about actions they performed in context to appear compliant with user requests.</p>
                 <div class="talk-subheading">About the speaker</div>
                 <p>Tommaso (Tommie) Tosato holds a PhD in cognitive neuroscience obtained in 2023 in Germany. After moving to Canada, they shifted their focus to LLM evaluation and interpretability, with a particular interest in understanding LLM personalities. They are now continuing this line of work with a focus on &quot;(dis)honesty&quot;, one of the most relevant threat models in loss-of-control scenarios. Tommie is leading this research both as co-founder of Tara Research, and as a postdoc in Gauthier Gidel&#x27;s lab at Mila.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2604.08169">[Paper]</a></li>
+                </ul>
             </details>
         </article>
         <article class="talk" id="talk-2026-04-01-milan-bhan">
@@ -167,6 +183,9 @@
                 <p>Large Language Models (LLMs) can generate plausible free text self-explanations to justify their answers. However, these natural language explanations may not accurately reflect the model’s actual reasoning process, indicating a lack of faithfulness. This presentation will introduce NeuroFaith, a flexible framework that measures the faithfulness of LLM free text self-explanation by identifying key concepts within explanations and mechanistically testing whether these concepts actually influence the model’s predictions.</p>
                 <div class="talk-subheading">About the speaker</div>
                 <p>Milan is a collaborating researcher at Mila supervised by Prof. Sarath Chandar.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2506.09277">[Paper]</a></li>
+                </ul>
             </details>
         </article>
         <article class="talk" id="talk-2026-03-18-rico-angell">
@@ -179,6 +198,9 @@
                 <p>Jailbreak transferability is the surprising phenomenon where an adversarial prompt compromising one model also elicits harmful responses from other models. Despite widespread demonstrations, there is little consensus on why transfer is possible: is it a quirk of safety training, an artifact of model families, or a more fundamental property of representation learning? In this talk, we present evidence that transferability emerges from shared representations rather than incidental flaws. We find two factors that systematically shape transfer: (1) model representational similarity and (2) the strength of the jailbreak on the source model. Furthermore, our qualitative analyses reveal systematic transferability patterns across different types of jailbreaks. Together, these results reframe jailbreak transfer as a consequence of representation alignment rather than a fragile by-product of safety training.</p>
                 <div class="talk-subheading">About the speaker</div>
                 <p>Rico Angell is a Postdoctoral Associate in the Center for Data Science at NYU. His research focuses on developing methods for detecting, understanding, and evaluating model failures, specifically in the space of AI safety and alignment. He is currently the lead of a recently awarded UK AISI Alignment Project Grant focused on efficient rare-event estimation. He received his Ph.D. from UMass Amherst, where his research was partially supported by an NSF Graduate Research Fellowship.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2506.12913">[Paper]</a></li>
+                </ul>
             </details>
         </article>
         <article class="talk" id="talk-2026-03-04-shruti-joshi">
@@ -191,6 +213,9 @@
                 <p>For interpretability findings to support safety-critical decisions, they must generalise beyond the settings in which they were discovered. We argue that causal inference and identifiability theory provide the formal grounding for this: they specify when recovered features reflect stable model structure rather than distributional artefacts. Next, we present Sparse Shift Autoencoders, which leverage distributional shift across contexts as identifiability supervision, as a practical step toward interpretability methods with generalisation guarantees.</p>
                 <div class="talk-subheading">About the speaker</div>
                 <p>Shruti Joshi is a PhD student at Mila and Université de Montréal. Her research studies the real-world implications of identifiable representation learning, with a focus on interpreting large language models.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2502.12179">[Paper]</a></li>
+                </ul>
             </details>
         </article>
         <article class="talk" id="talk-2026-02-04-sabrine-amri">
@@ -215,6 +240,9 @@
                 <p>Traditional component attribution assumes that each component affects the model’s predictions in a linear way, which prevents it from capturing interactions between components. We introduce a nonlinear approach that uses a Kolmogorov–Arnold Network (KAN) to model how the output responds when component outputs are perturbed and to quantify higher-order interactions. When applied to ResNet and ViT image classifiers, our method produces more accurate counterfactual predictions and reveals interacting components.</p>
                 <div class="talk-subheading">About the speaker</div>
                 <p>Samy is a research intern supervised by Prof. Christian Gagné at the University of Laval.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://openreview.net/forum?id=xzLOhw7LQm">[Paper]</a></li>
+                </ul>
             </details>
         </article>
         <h3 class="talks-heading">2025</h3>
@@ -228,6 +256,9 @@
                 <p>Black-box methods for understanding neural network behavior are insufficient for robust alignment, because they cannot efficiently detect rare catastrophic failures. To overcome this, we propose a paradigm of mechanistic estimation, in which algorithms use formal structural explanations of a network to estimate the average output analytically rather than inductively. We introduce the matching sampling principle (MSP), which posits that mechanistic algorithms can achieve approximation errors competitive with random sampling in the worst case. We further argue that in structured cases (such as trained neural networks), mechanistic algorithms can significantly outperform sampling-based methods. We report on preliminary progress in constructing mechanistic estimators for restricted model classes, including randomly selected MLPs and trained two-layer networks.</p>
                 <div class="talk-subheading">About the speaker</div>
                 <p>Eric Neyman is a researcher at the Alignment Research Center (ARC), which is working on a systematic and theoretically grounded approach to mechanistic interpretability. Before joining ARC, he was a PhD student at Columbia University, where he researched algorithmic Bayesian epistemology.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://www.alignment.org/blog/competing-with-sampling/">[Blog post]</a></li>
+                </ul>
             </details>
         </article>
         <article class="talk" id="talk-2025-11-26-sebastian-bordt">
@@ -240,21 +271,25 @@
                 <p>The computational cost of pretraining presents a fundamental challenge for empirical research in machine learning. In this talk, we introduce a novel approach that can significantly reduce the cost of pretraining experiments. By leveraging the multitask nature of the problem, we can conduct multiple independent experiments simultaneously during the same training run. We demonstrate the feasibility of this approach by re-training OLMo-2-1B with ten distinct experimental modifications. Although we only train a single model, we can replicate the results from multiple previous works on data contamination, poisoning, and memorization. We also conduct novel investigations into knowledge acquisition, mathematical reasoning, and watermarking. Overall, our findings suggest that performing multiple independent pretraining experiments in a single training run can enable rigorous scientific experimentation with large models on a compute budget.</p>
                 <div class="talk-subheading">About the speaker</div>
                 <p>Sebastian is a Postdoc at the University of Tübingen, Germany. His research focuses on large language models and interpretability.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2509.23383">[Paper]</a></li>
+                </ul>
             </details>
         </article>
         <article class="talk" id="talk-2025-11-12-jacques-cloete">
             <div class="talk-title">SPoRt - Safe Policy Ratio: Certified Training and Deployment of Task Policies in Model-Free RL</div>
             <div class="talk-presenter">Jacques Cloete</div>
             <div class="talk-meta">Wednesday, November 12, 2025 · Online</div>
-            <ul class="talk-links">
-                <li><a target="_blank" rel="noopener" href="https://jacquescloete.github.io/">[Website]</a></li>
-            </ul>
             <details>
                 <summary>Abstract and speaker</summary>
                 <div class="talk-subheading">Abstract</div>
                 <p>To apply reinforcement learning to safety-critical applications, we ought to provide safety guarantees during both policy training and deployment. In this work, we present theoretical results that place a bound on the probability of violating a safety property (as an LTL specification) for a new task-specific policy in a model-free, episodic setting. This bound, based on a maximum policy ratio computed with respect to a &#x27;safe&#x27; base policy, can also be applied to temporally-extended properties (beyond safety) and to robust control problems. To utilize these results, we introduce SPoRt, which provides a data-driven, PAC-based method for computing this bound for the base policy using the scenario approach, and includes Projected PPO, a new projection-based approach for training the task-specific policy while maintaining a user-specified bound on property violation. SPoRt thus enables users to trade off safety guarantees against task-specific performance. Complementing our theoretical results, we present experimental results demonstrating this trade-off and comparing the theoretical bound to posterior bounds derived from empirical violation rates.</p>
                 <div class="talk-subheading">About the speaker</div>
                 <p>Jacques is a DPhil (PhD) student in Robotics &amp; AI at the University of Oxford, supervised by Professor Ioannis Havoutis at the Oxford Robotics Institute, and Professor Alessandro Abate at the Department of Computer Science. Their research focuses on enabling robots to learn manipulation skills, with a focus on generalization across tasks defined in formal or natural language, and safe deployment in the real world. Their work draws heavily on neuro-symbolic methods such as LTL-guided reinforcement learning.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2504.06386">[Paper]</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://jacquescloete.github.io/">[Website]</a></li>
+                </ul>
             </details>
         </article>
         <article class="talk" id="talk-2025-10-29-yuxuan-zhu">
@@ -270,6 +305,9 @@
                 <p>1. CVE-Bench, an award winning benchmark (SafeBench award, ICML spotlight) that is used by frontier labs and governments to measure AI agents&#x27; ability to find and exploit real-world vulnerabilities.</p>
                 <p>2. Agent Benchmark Checklist, an award winning work (Berkeley AI summit, 1st place Benchmarks &amp; Evaluations track) that highlights major issues in existing benchmarks.</p>
                 <p>3. InjecAgent, one of the first AI agent safety benchmarks, used by governments and major labs.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2503.17332">[Paper]</a></li>
+                </ul>
             </details>
         </article>
         <article class="talk" id="talk-2025-10-15-nicholas-meade">
@@ -282,6 +320,9 @@
                 <p>LLM-based agents are becoming increasingly proficient at solving web-based tasks. With this capability comes a greater risk of misuse for malicious purposes, such as posting misinformation in an online forum or selling illicit substances on a website. To evaluate these risks, we propose SafeArena, a benchmark focused on the deliberate misuse of web agents. SafeArena comprises 250 safe and 250 harmful tasks across four websites. We classify the harmful tasks into five harm categories---misinformation, illegal activity, harassment, cybercrime, and social bias, designed to assess realistic misuses of web agents. We evaluate leading LLM-based web agents, including GPT-4o, Claude-3.5 Sonnet, Qwen-2-VL 72B, and Llama-3.2 90B, on our benchmark. To systematically assess their susceptibility to harmful tasks, we introduce the Agent Risk Assessment framework that categorizes agent behavior across four risk levels. We find agents are surprisingly compliant with malicious requests, with GPT-4o and Qwen-2 completing 34.7% and 27.3% of harmful requests, respectively. Our findings highlight the urgent need for safety alignment procedures for web agents.</p>
                 <div class="talk-subheading">About the speaker</div>
                 <p>Nicholas Meade is a PhD student at McGill University and Mila and is supervised by Siva Reddy. Broadly, his research is focused on analyzing and mitigating safety issues with Large Language Models (LLMs). He has investigated the susceptibility of LLMs to adversarial attacks and has proposed defense strategies. He has recently worked on designing benchmarks for assessing safety risks with LLM-based agents. He has also studied social bias mitigation techniques for LLMs. During his PhD, he has interned at Amazon Alexa AI.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2503.04957">[Paper]</a></li>
+                </ul>
             </details>
         </article>
         <article class="talk" id="talk-2025-10-01-shashwat-goel">
@@ -294,6 +335,9 @@
                 <p>As Language Model (LM) capabilities advance, evaluating and supervising them at scale is getting harder for humans. There is hope that other language models can automate both these tasks, which we refer to as &#x27;&#x27;AI Oversight&#x27;&#x27;. We study how model similarity affects both aspects of AI oversight by proposing Chance Adjusted Probabilistic Agreement (CAPA): a metric for LM similarity based on overlap in model mistakes. Using CAPA, we first show that LLM-as-a-judge scores favor models similar to the judge, generalizing recent self-preference results. Then, we study training on LM annotations, and find complementary knowledge between the weak supervisor and strong student model plays a crucial role in gains from &#x27;&#x27;weak-to-strong generalization&#x27;&#x27;. As model capabilities increase, it becomes harder to find their mistakes, and we might defer more to AI oversight. However, we observe a concerning trend -- model mistakes are becoming more similar with increasing capabilities, pointing to risks from correlated failures. Our work underscores the importance of reporting and correcting for model similarity, especially in the emerging paradigm of AI oversight.</p>
                 <div class="talk-subheading">About the speaker</div>
                 <p>Shashwat is a PhD student at the ELLIS Institute and Max Planck Institute for Intelligent Systems in Tübingen, co-advised by Jonas Geiping and Douwe Kiela. His research focuses on how to scale supervision for models as they approach superhuman capabilities. This involves both creating new evaluation paradigms, as well as automated generation of training data, to substitute for human supervision which is expensive to obtain. Before this he did a Bachelor&#x27;s and Master&#x27;s in Computer Science at IIIT Hyderabad where his thesis focused on evaluations for Machine Unlearning.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2502.04313">[Paper]</a></li>
+                </ul>
             </details>
         </article>
         <article class="talk" id="talk-2025-09-17-maximilian-puelma-touzel">
@@ -306,6 +350,9 @@
                 <p>Better safety evaluations for AI come from understanding systemic, group-level impacts—something even long-studied tech like social media defies due to three barriers: inaccessibility (lacking system access), impracticality (resource-intensive human studies), and ethical constraints (don&#x27;t manipulate real people). Simulation circumvents these issues but was previously limited by weak expressivity (overly simple agents) or weak grounding (excessive specification requirements). LLM-based simulation in principle overcomes both limitations. Informed by sociology and cognitive science, we are developing such an approach to study the systemic impact of AI-powered threats to information integrity specifically. In particular, we have built a social media simulator using Deepmind&#x27;s Concordia, a powerful and versatile generative AI agent modelling framework. In this talk, I&#x27;ll describe the simulator, technical challenges for validation, our formulation of systemic impact and example simulation results from a toy implementation of electoral opinion manipulation.</p>
                 <div class="talk-subheading">About the speaker</div>
                 <p>Max is a Research Scientist in Mila&#x27;s Applied Machine Learning Research Team. He leads an FLI &amp; IVADO-funded team project on LLM-based social simulations for studying information integrity and AI safety in collaboration with the Complex Data Lab led by Reihaneh Rabbany at McGill University and Jean-François Godbout at Université de Montréal. Max is a founding member of the AI Institute for Information Integrity and a member of the Centre for the Study of Democratic Citizenship. His current research centers on socio-technical dilemmas and information integrity in social systems such as social media using large-scale data science and many-agent system modelling. He has previously worked in the fields of computational neuroscience and statistical biophysics with a PhD on the stability of neural network dynamics from the International Max Planck Research School on the Physics of Complex Systems and the University of Goettingen and a double Math and Physics BSc from the University of Toronto. He arrived in Montreal in 2019 on an IVADO post-doctoral award supervised by Yoshua Bengio and Guillaume Lajoie, helped to grow the local NeuroAI community, then moved via reinforcement learning theory and natural language processing to multi-agent modelling with large language models. Since 2022, he has volunteered as a Curriculum Lead with Climate Match Academy, leading the design and delivery of content on the socioeconomic dimensions of the climate emergency.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2410.13915">[Paper]</a></li>
+                </ul>
             </details>
         </article>
         <!-- TALKS:END -->

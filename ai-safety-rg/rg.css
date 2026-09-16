@@ -91,7 +91,11 @@ section p + p {
     font-size: 0.9rem;
     color: var(--text-muted);
 }
-.talk-links li {
+.talk details ul {
+    margin: 8px 0 2px;
+    font-weight: 550;
+}
+.talk ul li {
     font-size: 0.9rem;
 }
 .talk details {
