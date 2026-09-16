@@ -1,0 +1,117 @@
+/* AI Safety Reading Group: page-specific styles on top of ../css/style.css */
+
+/* Header */
+header .info {
+    width: 100%;
+}
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* Space between consecutive paragraphs in a section */
+section p + p {
+    margin-top: 10px;
+}
+
+/* Practical information */
+.facts {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 4px 16px;
+    font-size: 1rem;
+}
+.facts dt {
+    color: var(--text-muted);
+}
+.facts + p {
+    margin-top: 12px;
+}
+@media (max-width: 480px) {
+    .facts {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .facts dd {
+        margin-bottom: 8px;
+    }
+}
+
+/* Organizers */
+.organizer-list {
+    display: block;
+}
+.organizer {
+    margin-bottom: 8px;
+}
+.organizer-name {
+    font-size: 1rem;
+    font-weight: 550;
+    color: var(--text-muted);
+}
+.organizer-affiliation {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-muted);
+}
+.organizer-contact {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+.email {
+    color: gray;
+}
+
+/* Talks */
+.talks-heading {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--theme-color);
+    margin: 20px 0 10px;
+}
+.talk {
+    margin-bottom: 20px;
+}
+.talk.upcoming {
+    padding-left: 14px;
+    border-left: 3px solid var(--theme-color);
+}
+.talk-title {
+    font-size: 1rem;
+    font-weight: 550;
+}
+.talk-presenter {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-muted);
+}
+.talk-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+.talk-links li {
+    font-size: 0.9rem;
+}
+.talk details {
+    margin-top: 4px;
+    font-size: 0.95rem;
+}
+.talk summary {
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--theme-color);
+}
+.talk details p {
+    margin: 6px 0;
+}
+.talk-subheading {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-weight: 550;
+}
+.muted {
+    color: var(--text-muted);
+}
+

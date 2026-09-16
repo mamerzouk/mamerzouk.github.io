@@ -40,6 +40,11 @@ nav {
     justify-content: flex-end;
     margin-bottom: 20px;
 }
+nav ul {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 4px;
+}
 /* Sliding light/dark switch */
 .theme-toggle {
     position: relative;
