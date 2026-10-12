@@ -95,10 +95,26 @@
         <hr>
         <!-- TALKS:START -->
         <h3 class="talks-heading">Upcoming</h3>
-        <article class="talk upcoming" id="talk-2026-09-30-milan-bhan">
+        <article class="talk upcoming" id="talk-2026-10-14-nolan-smyth">
+            <div class="talk-title">Quantifying Overclaiming Propensity in Frontier LLM Agents</div>
+            <div class="talk-presenter">Nolan Smyth</div>
+            <div class="talk-meta">Wednesday, October 14, 2026 · 1:00 PM – 2:00 PM (EDT) · Mila, room F01, and online on <a target="_blank" rel="noopener" href="https://meet.google.com/knr-syjx-nfy">Google Meet</a> · Online talk</div>
+            <details>
+                <summary>Abstract and speaker</summary>
+                <div class="talk-subheading">Abstract</div>
+                <p>Frontier coding agents are increasingly trusted to work autonomously for long periods of time, yet what they actually did is often hard to tell from their final response. We quantify the propensity of such agents to overclaim task completion, which may mislead the user. We operationalize overclaiming as a final response that reports work that the agent’s own transcript shows it did not do, for example, claiming to have read a file it never opened. This criterion requires no inference about intent and does not depend on whether the delivered work is correct; it asks only whether the reported work was done. We introduce OverclaimBench, an evaluation suite of five file-review scenarios with transcript-based coverage measurements and registered planted defects. We evaluate eight proprietary frontier models in their own production command-line interfaces and four open-weight models under a single fixed harness, and find that 1) agents fail to read every file they were asked to review in 67.9% of runs; 2) among these incomplete runs, agents are misleading 80.4% of the time (59–96% per model), either falsely claiming a complete review or leaving the gap undisclosed; 3) requiring delegation to subagents increases coverage, but a large majority of reviews that remain incomplete are still misleading; and 4) agents that falsely claim a complete review miss planted defects at about 1.8 times the rate of agents that read every file, showing that claims of completion can conceal substantive failures. Together, these results show that agents’ final responses are not reliable accounts of their actions.</p>
+                <div class="talk-subheading">About the speaker</div>
+                <p>Nolan is a postdoc at Université de Montréal and Mila working on AI safety and machine learning for astrophysics. Prior to his postdoc, he completed his PhD in physics at UC Santa Cruz as a NSF graduate research fellow. His recent work focuses on developing benchmarks to evaluate (dis)honesty in frontier language models as well as personality-based latent adversarial methods for alignment.</p>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2609.20812">[Paper]</a></li>
+                </ul>
+            </details>
+        </article>
+        <h3 class="talks-heading">2026</h3>
+        <article class="talk" id="talk-2026-09-30-milan-bhan">
             <div class="talk-title">Measuring the Faithfulness of LLM Free Text Self Explanations</div>
             <div class="talk-presenter">Milan Bhan</div>
-            <div class="talk-meta">Wednesday, September 30, 2026 · 1:00 PM – 2:00 PM (EDT) · Exceptionally online only, on <a target="_blank" rel="noopener" href="https://meet.google.com/knr-syjx-nfy">Google Meet</a></div>
+            <div class="talk-meta">Wednesday, September 30, 2026 · Online</div>
             <details>
                 <summary>Abstract and speaker</summary>
                 <div class="talk-subheading">Abstract</div>
@@ -110,7 +126,6 @@
                 </ul>
             </details>
         </article>
-        <h3 class="talks-heading">2026</h3>
         <article class="talk" id="talk-2026-07-08-damiano-fornasiere">
             <div class="talk-title">Language models recognize dropout and Gaussian noise applied to their activations</div>
             <div class="talk-presenter">Damiano Fornasiere</div>
