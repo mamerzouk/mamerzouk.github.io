@@ -70,6 +70,10 @@
                 <li><a target=”_blank” href="https://arxiv.org/abs/2607.05316">[Paper]</a></li>
                 <li><a target=”_blank” href="https://anonymous.4open.science/r/llm-output-length">[Code]</a></li>
             </ul>
+            <details>
+                <summary>Abstract</summary>
+                <p>Large language models generate one token at a time, yet their responses show remarkably consistent length structure: step-by-step solutions converge in predictable token counts, retrievals stop after a few sentences, retractions extend responses by measurable amounts. We ask whether the model carries an internal estimate of how much response remains. Training minimal-capacity linear probes on frozen hidden states of three open-weight 7-8B models across seven completion-style datasets, we find three converging pieces of evidence. First, total response length is linearly decodable from the prompt's last hidden state alone, before any output is emitted. Second, probe directions trained on natural-language datasets transfer broadly, including to controlled synthetic completions never seen in training, outperforming a statistical baseline; the converse direction generally fails, and this asymmetry is itself informative. Third, on curated high-loss completions, the probe's per-position estimate shifts upward at the moment the model retracts and restarts a partial solution, a directional behavior no position-only predictor can reproduce (qualitative, not aggregate). We frame this as approximate estimation of remaining generation length, distinct from exact-counting impossibility results for transformers, and interpret it as evidence that LLMs maintain a plan-like internal representation of output length (decodable, not necessarily used causally).</p>
+            </details>
         </div>
         <div class="paper">
             <div class="paper-title">Quantifying Overclaiming Propensity in Frontier LLM Agents</div>
@@ -78,6 +82,10 @@
             <ul>
                 <li><a target="_blank" href="https://arxiv.org/abs/2609.20812">[Paper]</a></li>
             </ul>
+            <details>
+                <summary>Abstract</summary>
+                <p>Frontier coding agents are increasingly trusted to work autonomously for long periods of time, yet what they actually did is often hard to tell from their final response. We quantify the propensity of such agents to overclaim task completion, which may mislead the user. We operationalize overclaiming as a final response that reports work that the agent's own transcript shows it did not do, for example, claiming to have read a file it never opened. This criterion requires no inference about intent and does not depend on whether the delivered work is correct; it asks only whether the reported work was done. We introduce OverclaimBench, an evaluation suite of five file-review scenarios with transcript-based coverage measurements and registered planted defects. We evaluate eight proprietary frontier models in their own production command-line interfaces and four open-weight models under a single fixed harness, and find that 1) agents fail to read every file they were asked to review in 67.9% of runs; 2) among these incomplete runs, agents are misleading 80.4% of the time (59-96% per model), either falsely claiming a complete review or leaving the gap undisclosed; 3) requiring delegation to subagents increases coverage, but a large majority of reviews that remain incomplete are still misleading; and 4) agents that falsely claim a complete review miss planted defects at about 1.8 times the rate of agents that read every file, showing that claims of completion can conceal substantive failures. Together, these results show that agents' final responses are not reliable accounts of their actions.</p>
+            </details>
         </div>
         <div class="paper">
             <div class="paper-title">Efficient Safety Alignment of Language Models via Latent Personality Traits</div>
@@ -87,6 +95,10 @@
                 <li><a target=”_blank” href="https://arxiv.org/abs/2607.07918">[Paper]</a></li>
                 <li><a target=”_blank” href="https://github.com/mamerzouk/latent-personality-alignment">[Code]</a></li>
             </ul>
+            <details>
+                <summary>Abstract</summary>
+                <p>Current safety methods for large language models are known to be vulnerable to adversarial attacks, motivating research into robust alternatives. Latent Adversarial Training (LAT) is among the most effective defenses, but can degrade utility and requires training on large datasets of harmful prompts. We introduce Latent Personality Alignment (LPA), which replaces explicit harm refusal with adversarial training on just 66 harm-agnostic statements drawn from psychometric personality literature. We hypothesize that personality-anchored representations share latent structure with harm avoidance, so adversarially stabilizing them implicitly constrains the subspace exploited by jailbreak attacks. LPA achieves near-zero attack success rates on HarmBench across direct requests and five jailbreak methods, despite never seeing harmful content during training and no loss of performance on standard benchmarks. Moreover, the training process is lightweight; the entire procedure completes in minutes on a single GPU and uses 75x fewer examples than standard LAT. Extensive ablations demonstrate the robustness, efficiency, and generalization of our method.</p>
+            </details>
         </div>
         <div class="paper">
             <div class="paper-title">Latent Personality Alignment: Improving Harmlessness Without Mentioning Harms</div>
@@ -96,6 +108,10 @@
                 <li><a target=”_blank” href="https://arxiv.org/abs/2605.08496">[Paper]</a></li>
                 <li><a target=”_blank” href="https://github.com/mamerzouk/latent-personality-alignment">[Code]</a></li>
             </ul>
+            <details>
+                <summary>Abstract</summary>
+                <p>Current adversarial robustness methods for large language models require extensive datasets of harmful prompts (thousands to hundreds of thousands of examples), yet remain vulnerable to novel attack vectors and distributional shifts. We propose Latent Personality Alignment (LPA), a sample-efficient defense that achieves robustness by training models on abstract personality traits rather than specific harmful behaviors. Using fewer than 100 trait statements and latent adversarial training, LPA achieves comparable attack success rates to methods trained on 150k+ examples, while maintaining superior utility. Critically, LPA generalizes better to unseen attack distributions, reducing misclassification rates by 2.6x compared to baseline across six harm benchmarks -- without ever seeing harmful examples during training. Our results demonstrate that personality-based alignment offers a principled approach to building robust defenses with minimal cost.</p>
+            </details>
         </div>
         <div class="paper">
             <div class="paper-title">Deep-Cover Agents: Long-Horizon Prompt Injections on Production LLM Systems</div>
@@ -112,6 +128,10 @@
             <ul>
                 <li><a target="_blank" href="https://arxiv.org/abs/2610.04319">[Paper]</a></li>
             </ul>
+            <details>
+                <summary>Abstract</summary>
+                <p>Transformer models such as BERT and Vision Transformer (ViT) achieve strong performance via densely parameterized attention backbones. However, the least significant bits (LSBs) of their 32-bit floating-point weights can be abused as covert channels to conceal malicious payloads, posing a serious threat to the AI model supply chain. We propose GrayShield (GS), a lightweight, post-training, zero-data sanitization method that completely replaces the declared mantissa-LSB channel with a Gray-code-guided low-transition sequence. Complete payload-independent overwrite, whether keyed or public, makes the sanitized target bits independent of the embedded payload and gives that declared channel zero capacity. Gray coding supplies overwrite structure, while a keyed per-tensor phase supplies pattern diversity. Benchmarked against seven post-training defenses on four Transformer model presets and two real-world malware payloads, GS maintains sub-1% accuracy impact and achieves 49.96 ± 0.66 percentage-point Recovery Reduction (RR) under five implemented attacker variants. Because pre-defense recovery is effectively 100%, RR near 50 percentage points corresponds to post-sanitization bit accuracy at binary chance. Its main empirical advantage is stable near-chance sanitization with substantially smaller weight-distribution shift than the evaluated near-chance baselines PatternMask (PM) and Post-Training Quantization (PTQ).</p>
+            </details>
         </div>
         <div class="paper">
             <div class="paper-title">Efficiency vs. Alignment: Investigating Safety and Fairness Risks in Parameter-Efficient Fine-Tuning of LLMs</div>
@@ -121,6 +141,10 @@
                 <li><a target=”_blank” href="https://arxiv.org/abs/2511.00382">[Paper]</a></li>
                 <li><a target=”_blank” href="https://github.com/mina-taraghi/PEFT_Safety_Fairness">[Code]</a></li>
             </ul>
+            <details>
+                <summary>Abstract</summary>
+                <p>Organizations increasingly adapt Large Language Models (LLMs) from public repositories such as HuggingFace to downstream tasks. Prior work shows that even fine-tuning on benign datasets can weaken safety alignment, raising a practical question: does benign parameter-efficient fine-tuning (PEFT) also affect safety and fairness? We present the first large-scale, systematic study showing that benign PEFT can significantly alter both. We fine-tune four instruction-tuned model families (Meta-Llama-3-8B, Qwen2.5-7B, Mistral-7B, and Gemma-7B) with four widely used PEFT methods: LoRA, IA3, Prompt-Tuning, and P-Tuning. In total, we evaluate 235 conversationally fine-tuned variants across eleven safety hazard categories and nine fairness dimensions. We assess generalization beyond conversational tuning by incorporating a compact extension focused on coding tasks, involving 96 additional fine-tuned models. Results show that benign PEFT can induce detrimental alignment shifts. Adapter-based methods (LoRA, IA3) are generally safer and less disruptive to fairness, whereas prompt-based methods more often reduce safety and worsen fairness accuracy. Base model choice strongly moderates these effects: LLaMA is comparatively stable, Qwen shows modest gains, Gemma exhibits the steepest safety decline, and Mistral is the most variable. The coding-task extension also produces alignment shifts relative to base models, but matched comparisons with the conversational task reveal limited task-level differences. Overall, safety improvements do not reliably transfer to fairness, and no single configuration optimizes every fairness metric. These findings support a practical guideline for safety-critical deployment: benign intent does not guarantee safe behaviour; start from a well-aligned base model, favour adapter-based PEFT, and audit safety and fairness at the category level.</p>
+            </details>
         </div>
         <div class="paper">
             <div class="paper-title">Diffusion-based Adversarial Purification for Intrusion Detection</div>
@@ -130,6 +154,10 @@
                 <li><a target=”_blank” href="https://link.springer.com/chapter/10.1007/978-3-031-96590-6_19">[Paper]</a></li>
                 <li><a target=”_blank” href="https://github.com/mamerzouk/adversarial-purification">[Code]</a></li>
             </ul>
+            <details>
+                <summary>Abstract</summary>
+                <p>The rise of sophisticated cyberattacks has fueled the adoption of machine learning (ML) techniques in intrusion detection systems; however, the emergence of adversarial examples poses a critical challenge, allowing malicious actors to bypass detection or generate false alerts. In response, this paper introduces a novel approach to adversarial purification in intrusion detection utilizing diffusion models, which have demonstrated promising capabilities in various domains. Our research is the first to explore the effectiveness of these models specifically within the context of network intrusion detection. We conduct a thorough analysis of diffusion model parameters, revealing optimal configurations that enhance adversarial robustness while maintaining the integrity of normal performance. Notably, we provide insights into the intricate relationship between diffusion noise and the number of diffusion steps and leverage them to optimize the diffusion process. Our comprehensive experiments across two prominent datasets and against five different adversarial attacks underscore the strong purification potential of diffusion models, marking a pivotal contribution to enhancing the resilience of intrusion detection systems against adversarial threats. For further research, we make our implementation code is publicly available on Github .</p>
+            </details>
         </div>
         <div class="paper">
             <div class="paper-title">Adversarial robustness of deep reinforcement learning-based intrusion detection</div>
@@ -139,6 +167,10 @@
                 <li><a target=”_blank” href="https://link.springer.com/article/10.1007/s10207-024-00903-2">[Paper]</a></li>
                 <li><a target=”_blank” href="https://github.com/mamerzouk/robust_drl_ids">[Code]</a></li>
             </ul>
+            <details>
+                <summary>Abstract</summary>
+                <p>Machine learning techniques, including Deep Reinforcement Learning (DRL), enhance intrusion detection systems by adapting to new threats. However, DRL’s reliance on vulnerable deep neural networks leads to susceptibility to adversarial examples-perturbations designed to evade detection. While adversarial examples are well-studied in deep learning, their impact on DRL-based intrusion detection remains underexplored, particularly in critical domains. This article conducts a thorough analysis of DRL-based intrusion detection’s vulnerability to adversarial examples. It systematically evaluates key hyperparameters such as DRL algorithms, neural network depth, and width, impacting agents’ robustness. The study extends to black-box attacks, demonstrating adversarial transferability across DRL algorithms. Findings emphasize neural network architecture’s critical role in DRL agent robustness, addressing underfitting and overfitting challenges. Practical implications include insights for optimizing DRL-based intrusion detection agents to enhance performance and resilience. Experiments encompass multiple DRL algorithms tested on three datasets: NSL-KDD, UNSW-NB15, and CICIoV2024, against gradient-based adversarial attacks, with publicly available implementation code.</p>
+            </details>
         </div>
         <div class="paper">
             <div class="paper-title">Parameterizing poisoning attacks in federated learning-based intrusion detection</div>
@@ -148,6 +180,10 @@
                 <li><a target=”_blank” href="https://dl.acm.org/doi/abs/10.1145/3600160.3605090">[Paper]</a></li>
                 <li><a target=”_blank” href="https://github.com/mamerzouk/poisoning-fl-ids">[Code]</a></li>
             </ul>
+            <details>
+                <summary>Abstract</summary>
+                <p>Federated learning is a promising research direction in network intrusion detection. It enables collaborative training of machine learning models without revealing sensitive data. However, the lack of transparency in federated learning creates a security threat. Since the server cannot ensure the clients’ reliability by analyzing their data, malicious clients have the opportunity to insert a backdoor in the model and activate it to evade detection. To maximize their chances of success, adversaries must fine-tune the attack parameters. Here we evaluate the impact of four attack parameters on the effectiveness, stealthiness, consistency, and timing of data poisoning attacks. Our results show that each parameter is decisive for the success of poisoning attacks, provided they are carefully adjusted to avoid damaging the model’s accuracy or the data’s consistency. Our findings serve as guidelines for the security evaluation of federated learning systems and insights for defense strategies. Our experiments are carried out on the UNSW-NB15 dataset, and their implementation is available in a public code repository.</p>
+            </details>
         </div>
         <div class="paper">
             <div class="paper-title">Investigating the practicality of adversarial evasion attacks on network intrusion detection</div>
@@ -157,6 +193,10 @@
                 <li><a target=”_blank” href="https://link.springer.com/article/10.1007/s12243-022-00910-1">[Paper]</a></li>
                 <li><a target=”_blank” href="https://github.com/mamerzouk/adversarial_analysis">[Code]</a></li>
             </ul>
+            <details>
+                <summary>Abstract</summary>
+                <p>As machine learning models are increasingly integrated into critical cybersecurity tools, their security issues become a priority. Particularly after the rise of adversarial examples, original data to which a small and well-computed perturbation is added to influence the prediction of the model. Applied to cybersecurity tools, like network intrusion detection systems, they could allow attackers to evade detection mechanisms that rely on machine learning. However, if the perturbation does not consider the constraints of network traffic, the adversarial examples may be inconsistent, thus making the attack invalid. These inconsistencies are a major obstacle to the implementation of end-to-end network attacks. In this article, we study the practicality of adversarial attacks for the purpose of evading network intrusion detection models. We evaluate the impact of state-of-the-art attacks on three different datasets. Through a fine-grained analysis of the generated adversarial examples, we introduce and discuss four key criteria that are necessary for the validity of network traffic, namely value ranges, binary values, multiple category membership, and semantic relations.</p>
+            </details>
         </div>
         <div class="paper">
             <div class="paper-title">Evading deep reinforcement learning-based network intrusion detection with adversarial attacks</div>
@@ -166,6 +206,10 @@
                 <li><a target=”_blank” href="https://dl.acm.org/doi/abs/10.1145/3538969.3539006">[Paper]</a></li>
                 <li><a target=”_blank” href="https://github.com/mamerzouk/robust_drl_ids">[Code]</a></li>
             </ul>
+            <details>
+                <summary>Abstract</summary>
+                <p>An Intrusion Detection System (IDS) aims to detect attacks conducted over computer networks by analyzing traffic data. Deep Reinforcement Learning (Deep-RL) is a promising lead in IDS research, due to its lightness and adaptability. However, the neural networks on which Deep-RL is based can be vulnerable to adversarial attacks. By applying a well-computed modification to malicious traffic, adversarial examples can evade detection. In this paper, we test the performance of a state-of-the-art Deep-RL IDS agent against the Fast Gradient Sign Method (FGSM) and Basic Iterative Method (BIM) adversarial attacks. We demonstrate that the performance of the Deep-RL detection agent is compromised in the face of adversarial examples and highlight the need for future Deep-RL IDS work to consider mechanisms for coping with adversarial examples.</p>
+            </details>
         </div>
         <div class="paper">
             <div class="paper-title">A deeper analysis of adversarial examples in intrusion detection</div>
@@ -175,6 +219,10 @@
                 <li><a target=”_blank” href="https://link.springer.com/chapter/10.1007/978-3-030-68887-5_4">[Paper]</a></li>
                 <li><a target=”_blank” href="https://github.com/mamerzouk/adversarial_analysis">[Code]</a></li>
             </ul>
+            <details>
+                <summary>Abstract</summary>
+                <p>During the last decade, machine learning algorithms have massively integrated the defense arsenal made available to security professionals, especially for intrusion detection. However, and despite the progress made in this area, machine learning models have been found to be vulnerable to slightly modified data samples called adversarial examples. Thereby, a small and well-computed perturbation may allow adversaries to evade intrusion detection systems. Numerous works have already successfully applied adversarial examples to network intrusion detection datasets. Yet little attention was given so far to the practicality of these examples in the implementation of end-to-end network attacks. In this paper, we study the applicability of network attacks based on adversarial examples in real networks. We minutely analyze adversarial examples generated with state-of-the-art algorithms to evaluate their consistency based on several criteria. Our results show a large proportion of invalid examples that are unlikely to lead to real attacks.</p>
+            </details>
         </div>
     </section>
 

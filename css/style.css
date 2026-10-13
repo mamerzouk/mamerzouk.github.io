@@ -194,6 +194,19 @@ links {
 .course, .paper ul li {
     font-size: 0.9rem;
 }
+/* Collapsible abstract under each paper */
+.paper details {
+    margin-top: 2px;
+    font-size: 0.95rem;
+}
+.paper summary {
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--theme-color);
+}
+.paper details p {
+    margin: 6px 0 4px;
+}
 
 .responsive-image {
   display: none;
