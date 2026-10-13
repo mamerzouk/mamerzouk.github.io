@@ -120,6 +120,10 @@
             <ul>
                 <li><a target=”_blank” href="https://openreview.net/forum?id=U3kxnDzuRz">[Paper]</a></li>
             </ul>
+            <details>
+                <summary>Abstract</summary>
+                <p>Instruction-following LLM assistants that read untrusted data are susceptible to prompt injection, wherein a malicious actor injects a harmful request that the assistant naively complies with, to the user's detriment. We analyze the structure of tool-using LLM agents to create a descriptive framework for prompt injection attacks. By examining this framework, we find that certain attack modalities are understudied, and observe important trends in attack performance as we vary how prompt injection attacks are introduced and their token budget with practical takeaways. Importantly, previous work does not significantly explore the dimension of time, and we make the key finding that after being prompt-injected, many agents can behave benignly for 50+ conversation turns before taking a malicious action. Finally, we validate our work by executing sandboxed attacks against deployment systems such as Claude Code and Gemini-CLI. Our attacks readily succeed, and additionally reveal as-yet undocumented emergent behavior in these models' responses to prompt injection.</p>
+            </details>
         </div>
         <div class="paper">
             <div class="paper-title">GrayShield: Bit-Level Sanitization for Transformer Model Supply-Chain Security</div>
